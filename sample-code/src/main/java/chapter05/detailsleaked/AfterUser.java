@@ -13,7 +13,7 @@ public class AfterUser {
         this._name = normalizeName(name);
     }
 
-    public String normalizeName(String name) {
+    private String normalizeName(String name) {
         String result = (name == null ? "" : name).trim();
 
         if (result.length() > 50) {
