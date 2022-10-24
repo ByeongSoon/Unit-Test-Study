@@ -21,4 +21,16 @@ public class CustomerTests {
         verify(storeMock, times(1)).removeInventory(Product.Shampoo, 5);
     }
 
+    @Test
+    @DisplayName("목을 사용하지 않은 테스트")
+    public void afterPurchaseSucceedsWhenEnoughInventory() throws Exception {
+        IStore store = new Store();
+        store.addInventory(Product.Shampoo, 10);
+        Customer sut = new Customer();
+
+        sut.purchase(store, Product.Shampoo, 5);
+
+        Assertions.assertEquals(5, store.getInventory(Product.Shampoo));
+    }
+
 }

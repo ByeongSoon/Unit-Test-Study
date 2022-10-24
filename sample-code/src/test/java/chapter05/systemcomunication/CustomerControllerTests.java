@@ -12,7 +12,6 @@ public class CustomerControllerTests {
     @DisplayName("취약한 테스트로 이어지지 않는 목 사용")
     public void successfulPurchase() throws Exception {
         IEmailGateway mock = mock(IEmailGateway.class);
-//        CustomerController sut = new CustomerController(mock);
         CustomerController sut = new CustomerController(mock);
 
         boolean isSuccess = sut.purchase(1,2,5);
