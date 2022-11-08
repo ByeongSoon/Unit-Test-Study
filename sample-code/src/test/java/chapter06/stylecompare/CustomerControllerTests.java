@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CustomerControllerTests {
 
     @Test
-    @DisplayName("많은 공간을 차지하는 상태 검증")
+    @DisplayName("예제 6.4 많은 공간을 차지하는 상태 검증")
     public void addingACommentToAnArticle1() {
         Article sut = new Article();
         String text = "Comment text";
@@ -26,7 +26,7 @@ public class CustomerControllerTests {
     }
 
     @Test
-    @DisplayName("검증문에 헬퍼 메서드 사용")
+    @DisplayName("예제 6.5 검증문에 헬퍼 메서드 사용")
     public void addingACommentToAnArticle2() {
         Article sut = new Article();
         String text = "Comment text";
@@ -41,7 +41,7 @@ public class CustomerControllerTests {
     }
 
     @Test
-    @DisplayName("값으로 비교하는 Comment")
+    @DisplayName("예제 6.6 값으로 비교하는 Comment")
     public void addingACommentToAnArticle3() {
         Article sut = new Article();
         Comment comment = new Comment(
