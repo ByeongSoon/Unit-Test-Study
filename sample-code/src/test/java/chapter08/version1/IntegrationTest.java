@@ -43,15 +43,13 @@ public class IntegrationTest {
             .sendEmailChangedMessage(user.getUserId(), "new@gmail.com");
     }
 
-    private Company createCompany(String domainName, int numberOfEmployees, Database database)
-    {
+    private Company createCompany(String domainName, int numberOfEmployees, Database database) {
         Company company = new Company(domainName, numberOfEmployees);
         database.saveCompany(company);
         return company;
     }
 
-    private User createUser(String email, UserType type, Database database)
-    {
+    private User createUser(String email, UserType type, Database database) {
         User user = new User(0, email, type, false);
         database.saveUser(user);
         return user;
